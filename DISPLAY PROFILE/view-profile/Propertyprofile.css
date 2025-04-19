@@ -1,0 +1,153 @@
+:root {
+    --primary-color: white;
+    --secondary-color: rgba(255, 255, 255, 0.1);
+    --border-color: rgba(255, 255, 255, 0.5);
+    --highlight-color:  hsl(266, 71%, 54%) ; /* Highlight color for links and buttons */
+    --padding: 20px;
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in element's total width and height */
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+    font-family: var(--font-family);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #1a1a1a; /* Dark background for contrast */
+}
+
+.navbar {
+    top: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333; /* Darker navbar background */
+    width: 100%; /* Full width */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: hsl(266, 71%, 54%)  ;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--highlight-color); /* Highlight color on hover */
+}
+
+.main-con {
+    display: grid;
+    place-items: center;
+    margin-top: 2rem;
+    padding: var(--padding);
+}
+
+.user-infoCon {
+    justify-content: center;
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px; /* Rounded corners for a softer look */
+    padding: 2rem; /* Padding inside the user info container */
+    width: 100%; /* Responsive width */
+    height: 60vh; /* Max width for larger screens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    align-items: center; /* Center items vertically */
+}
+
+.child-con {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    margin-right: 2rem; /* Space between image and info */
+}
+
+.child-con img {
+    width: 150px; /* Fixed width for profile image */
+    height: 150px; /* Fixed height for profile image */
+    border-radius: 50%; /* Circular profile image */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.name {
+    font-size: 1.5rem; /* Increased font size for better visibility */
+    font-weight: bold;
+    margin-top: 1rem; /* Space above the name */
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    flex-grow: 1; /* Allow this box to take remaining space */
+}
+
+.box {
+    display: flex; /* Ensure box items are displayed in a row */
+    flex-direction: column; /* Stack items vertically */
+    margin-bottom: 1rem; /* Space below each box */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease; /* Smooth transition for link color */
+    margin-bottom: 0.5rem; /* Space below links */
+}
+
+a:hover {
+    color: var(--highlight-color); /* Highlight color on hover */
+}
+
+label {
+    font-weight: bold; /* Bold labels for better visibility */
+}
+
+.phone {
+    font-weight: bold; /* Bold phone label */
+}
+
+/* Button styling */
+.btn {
+    background-color: var(--highlight-color); /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    width: 160px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem; /* Space below button */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color:  hsl(266, 63%, 64%) ;
+    color: white; /* Darker button color on hover */
+}
+
+/* Responsive Design */
